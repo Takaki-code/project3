@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index-teamcx</title>
+    <link rel="stylesheet" href="css/public_style.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/lunbo.js"></script>
+</head>
+
+<body onload='auto()'>
+    <%- include ('./header.html')%>
+    <section>
+        <div class="banner">
+            <ul class=".clearfix" style="left:-1920px" id="bannermax">
+                <li><a href=""><img src="images/banner2.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/banner1.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/banner2.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/banner1.jpg" alt=""></a></li>
+            </ul>
+            <div class="lunbo-zhe"></div>
+            <div class="banner2">
+                <ul class="clearfix" style="left:-340px" id="bannermin">
+                    <li><a href=""><img src="images/banner2.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/banner1.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/banner2.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/banner1.jpg" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="banner-buttonpos clearfix">
+                <div class="banner-button" onclick="left()"><span class="iconfont iconzuo" style="font-size:20px;">
+                </div>
+                <div class="banner-button" onclick="right()"><span class="iconfont iconyou"
+                        style="font-size:20px;"></span></div>
+            </div>
+            <div class="lunbop">
+                <p id="lunbop1-1">DELER STREAK</p>
+                <p id="lunbop1-2">DEsigner of original SICBO Black-123</p>
+            </div>
+            <div class="lunbop">
+                <p id="lunbop2-1">百种设备互联互通的“智慧”中心</p>
+                <p id="lunbop2-2">射频RF协议/红外遥控/智能互联/远程操作</p>
+            </div>
+        </div>
+        <div class="part3back">
+            <div class="content">
+                <div class="part3 content-p">
+                    <p id="zhihui">智慧产品</p>
+                    <p id="smart">Smart Produce</p>
+                    <ul class="part3-firstul clearfix">
+                        <li><a href="zhihuichanpin.html?dataClass=all">全部</a></li>
+                        <li><a href="zhihuichanpin.html?dataClass=dengju">灯具和电器</a></li>
+                        <li><a href="zhihuichanpin.html?dataClass=wenkong">温控器</a></li>
+                        <li><a href="zhihuichanpin.html?dataClass=family">家庭电影院</a></li>
+                    </ul>
+                    <ul class="part3-secondul clearfix">
+                        <% for(let i = 0; i < info.length; i++){ %>
+                        <li id="chanpin" +(i+1)>
+                            <a href="shop.html?shopId=<%= info[i].shop_id %>">
+                                <img src="<%= info[i].shop_img %>">
+                                <div></div>
+                                <div><span class="iconfont iconhao"></span></div>
+                                <div> <%= info[i].shopName %> </div>
+                                <div> <%= info[i].shopName_E %> </div>
+                            </a></li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+            <div class="more" id="more">
+                <a href="zhihuichanpin.html">MORE <span class="iconfont iconyou"></span></a>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="chanpinlei">
+            <img src="images/background1.jpg" class="chanpinback">
+            <div class="content chanpinpos">
+                <div class="chanpinleft">
+                    <ul>
+                        <li id="chanpinlei1"><a href="jiaju2.html">
+                                <div></div>
+                                <img src="images/chanpin2-1.png">
+                                <div></div>
+                                <div></div>
+                                <div class="chanpin-art">
+                                    <p>智能灯具 / Smart lighting</p>
+                                    <p>开/关照明设施 可用智能手机统一开关安装在各个房间里的多个照明设备 以减少能源使用量</p>
+                                </div>
+                            </a></li>
+                        <li id="chanpinlei2"><a href="jiaju2.html">
+                                <div></div>
+                                <img src="images/chanpin2-2.png">
+                                <div></div>
+                                <div></div>
+                                <div class="chanpin-art">
+                                    <p>智能遥控 / Intelligent remote control</p>
+                                    <p>来访客时，在室外或在家中的任何地方可用智能手机开锁，还可查询门锁是否锁好</p>
+                                </div>
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="chanpinright">
+                    <ul>
+                        <li id="chanpinlei3"><a href="jiaju2.html">
+                                <div></div>
+                                <img src="images/chanpin2-3.png">
+                                <div></div>
+                                <div></div>
+                                <div class="chanpin-art">
+                                    <p>智能灯具 / Smart lighting</p>
+                                    <p>深夜或凌晨等非正常时间段发生出入的情形，或其它没有在规定时间段出入的情形，会用智能手机进行</p>
+                                </div>
+                            </a></li>
+                        <li id="chanpinlei4"><a href="jiaju2.html">
+                                <div></div>
+                                <img src="images/chanpin2-4.png">
+                                <div></div>
+                                <div></div>
+                                <div class="chanpin-art">
+                                    <p>智能门锁 / Smart lighting</p>
+                                    <p>长期不在家或年幼子女独自在家的时，可用智能手机监控，回家前通过监控，确保家庭安全</p>
+                                </div>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="news">
+            <div class="content">
+                <div class="content-p">
+                    <p id="dongtai">最新动态</p>
+                    <p id="lat">Latest News</p>
+                    <ul class="clearfix news-ul1">
+                        <li id="all2"><a href="shouye1.html">全部</a></li>
+                        <li id="zuixin"><a href="shouye2.html">最新</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content news-cont">
+                <div class="news-neirong">
+                    <div id="newscont1">
+                        <a href="first.html">
+                            <div><img src="images/news1.jpg" alt=""></div>
+                            <div><span class="iconfont iconhao"></span></div>
+                            <p>未来智能化商业峰会成都站 AIoT赋能新商业 新场景</p>
+                            <p>智能化商业的浪潮下，智能终端产生的数据反过来指导和驱动商业系统运作。面对商业时代的更迭，忽略变化的传统企业正</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="news-neirong">
+                    <div id="newscont2">
+                        <a href="second.html">
+                            <div><img src="images/news2.jpg" alt=""></div>
+                            <div><span class="iconfont iconhao"></span></div>
+                            <p>信任和责任 继续前行</p>
+                            <p>MAGMODE名堂是由作家蔡崇达、《智族GQ》原时尚副总监梁春敏、《一条》原美学总监冯鹏、《外滩画报》前时尚版主</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="news-neirong">
+                    <div id="newscont3">
+                        <a href="third.html">
+                            <div><img src="images/news3.jpg" alt=""></div>
+                            <div><span class="iconfont iconhao"></span></div>
+                            <p>CEBIT上备受关注的全球化智能平台 要给合作伙伴...</p>
+                            <p>全球知名调研机构IDC曾对2000位跨国企业CEO做过一项调查，结果显示到2018年，全球1000强企业中的67%都把数字</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="more" id="more2">
+                <a href="shouye1.html">MORE <span class="iconfont iconyou"></span></a>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="chenggo">
+            <div class="content ">
+                <div class="content-p">
+                    <p id="anli">成功案例</p>
+                    <p id="succ">Success Case</p>
+                </div>
+                <div class="anlipos clearfix">
+                    <div class="anlileft clearfix" id="anlicont0">
+                        <img src="images/anli1.jpg" alt="" class="imgcd" id="changeimg1">
+                        <img src="images/anli2.jpg" alt="" class="imgcd" id="changeimg2">
+                        <img src="images/anli3.jpg" alt="" class="imgcd" id="changeimg3">
+                        <img src="images/anli4.jpg" alt="" class="imgcd" id="changeimg4">
+                        <img src="images/anli5.jpg" alt="" class="imgcd" id="changeimg5">
+                        <img src="images/anli6.jpg" alt="" class="imgcd" id="changeimg6">
+                    </div>
+                    <div class="anliright">
+                        <ul>
+                            <li id="anlicont1">
+                                <a href="">
+                                    <img src="images/anli1.jpg" alt="">
+                                    <div></div>
+                                    <div>
+                                        <p>智能声控龙头</p>
+                                        <p>抽拉厨房龙头AEO2B1202</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li id="anlicont2">
+                                <a href="">
+                                    <img src="images/anli2.jpg" alt="">
+                                    <div></div>
+                                    <div>
+                                        <p>Panasonic 智能指纹锁</p>
+                                        <p>触控密码锁 防盗门锁</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li id="anlicont3">
+                                <a href="">
+                                    <img src="images/anli3.jpg" alt="">
+                                    <div></div>
+                                    <div>
+                                        <p>德国Netdes 全铜龙头</p>
+                                        <p>进口陶瓷阀芯 智能节水</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li id="anlicont4">
+                                <a href="">
+                                    <img src="images/anli4.jpg" alt="">
+                                    <div></div>
+                                    <div>
+                                        <p>Lynx（猞猁）智能水龙头</p>
+                                        <p>MurraySharp设计</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li id="anlicont5">
+                                <a href="">
+                                    <img src="images/anli5.jpg" alt="">
+                                    <div></div>
+                                    <div>
+                                        <p>DIHAO多功能按摩沙发</p>
+                                        <p>客厅家具 双位+单位+按摩贵妃</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li id="anlicont6">
+                                <a href="">
+                                    <img src="images/anli6.jpg" alt="">
+                                    <div></div>
+                                    <div>
+                                        <p>智能照明 HW-WG2J</p>
+                                        <p>安装给你舒适的家</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hezuo">
+            <div class="content ">
+                <div class="content-p">
+                    <p id="hezuo">合作伙伴</p>
+                    <p id="part">Partner</p>
+                </div>
+                <ul class="clearfix">
+                    <li id="hezuologo1"><img src="images/hezuologo1.jpg" alt="">
+                        <div></div>
+                    </li>
+                    <li id="hezuologo2"><img src="images/hezuologo2.jpg" alt="">
+                        <div></div>
+                    </li>
+                    <li id="hezuologo3"><img src="images/hezuologo3.jpg" alt="">
+                        <div></div>
+                    </li>
+                    <li id="hezuologo4"><img src="images/hezuologo4.jpg" alt="">
+                        <div></div>
+                    </li>
+                    <li id="hezuologo5"><img src="images/hezuologo5.jpg" alt="">
+                        <div></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="biaodan">
+            <div class="content clearfix">
+                <div class="messg clearfix">
+                    <p>网站建设文化传播有限公司</p>
+                    <p>地址：中国地区XX分区5A写字楼8-88室</p>
+                    <p>邮编：100000</p>
+                    <p>电话：400-888-8888</p>
+                    <p>手机：188-6666-5188</p>
+                    <p>传真：000-66668888</p>
+                    <p>邮箱：</p>
+                    <ul>
+                        <li><a href=""><span class="iconfont iconqq" style="font-size: 18px;"></span></a></li>
+                        <li><a href=""><span class="iconfont iconweixin" style="font-size: 18px;"></span></a></li>
+                        <li><a href=""><span class="iconfont iconweibo" style="font-size: 18px;"></span></a></li>
+                    </ul>
+                </div>
+                <div class="biaodancont">
+                    <form action="#" method="POST">
+                        <div class="firsthang">
+                            <input type="text" name="name" class="wenben" placeholder="姓名">
+                            <input type="email" name="email" class="wenben" placeholder="邮箱">
+                            <input type="text" name="phone" class="wenben" placeholder="电话">
+                            <textarea name="content" placeholder="内容"></textarea>
+                            <input type="submit" value="提交" class="subbtn">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <%- include ('./footer.html')%>
+</body>
+
+</html>

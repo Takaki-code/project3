@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/public_style.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/shopcar.css">
+</head>
+
+<body>
+    <%- include ('./header.html')%>
+    <section>
+        <div class="content">
+            <table class="table" cellspacing='0'>
+                <thead class="thead">
+                    <tr>
+                        <td> <input type="checkbox" class="checkbox"></td>
+                        <td>商品</td>
+                        <td>单价</td>
+                        <td>数量</td>
+                        <td>小计</td>
+                        <td>操作</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i = 0;i<info.length;i++){ %>
+                    <tr>
+                        <td><input type="checkbox" class="check"></td>
+                        <td class="imgtd">
+                            <div class="tdleft">
+                                <img src="<%= info[i].shopimg %>" alt="">
+                            </div>
+                            <div class="tdright">
+                                <p><%= info[i].shopName %></p>
+                                <p><%= info[i].shopcolor %></p>
+                                <p><%= info[i].shopguige %></p>
+                            </div>
+                        </td>
+                        <td>￥<span> <%= info[i].price %></span></td>
+                        <td class="imgnum">
+                            <button class="num removnum" data-shopid=<%= info[i].shop_id%>>-</button>
+                            <input type="text" class="num" value="<%= info[i].num %>">
+                            <button class="num addnum" data-shopid=<%= info[i].shop_id%>>+</button>
+                        </td>
+                        <td class="xiaoji">￥<span><%= info[i].total %></span></td>
+                        <td><button class="remove" data-shopid=<%= info[i].shop_id%>>删除</button></td>
+                    </tr>
+                    <% } %>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>总价（不含运费）:</td>
+                        <td id="totalw"> ￥<span id="total">0</span> </td>
+                        <td><button class="tobuy">去结算</button></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+    </section>
+    <%- include ('./footer.html')%>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/shopcar.js"></script>
+</body>
+
+</html>

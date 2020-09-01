@@ -1,0 +1,770 @@
+/* 导航栏当前标记 */
+nav ul:first-child li:nth-child(1) a{
+    color:#3DB45E;
+    border-bottom: 2px solid #3DB45E;
+}
+/* 最外部的盒子，设置溢出隐藏 */
+.banner{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+/* 轮播背景遮罩 */
+.lunbo-zhe{
+    width: 100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+}
+/* 包裹图片的盒子，宽度足够长，让图片排开 */
+#bannermax{
+    width:8000px;
+    position: relative;
+    transition:all 0.3s linear;
+}
+/* 每个li包裹一张图片，li的宽度跟最外层盒子一样，这里设置的固定满屏，自适应方法不会 */
+#bannermax li{
+    width:1920px;
+    float: left;
+}
+/* 每张图片宽度占满一个li */
+#bannermax img{
+    width: 100%;
+    min-width: 1200px;
+    vertical-align: top;
+}
+/* 包裹翻页按钮的盒子定位 */
+.banner-buttonpos{
+    position: absolute;
+    bottom:172px;
+    left:300px;
+    width:180px;
+}
+/* 翻页按钮 */
+.banner-button{
+    float: left;
+    width: 90px;
+    height:90px;
+    line-height: 90px;
+    text-align: center;
+    color:#fff;
+    transition: all 0.2s linear;
+    background-color: rgba(0,0,0,0.2);
+}
+.banner-button:hover{
+    background-color: #3DB45E;
+}
+/* 小轮播 */
+.banner2{
+    width: 340px;
+    height:172px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 90px;
+    left:50px;
+}
+.banner2 li{
+    float: left;
+    width: 340px;
+    height:172px;
+}
+.banner2 img{
+    width:100%;
+}
+#bannermin{
+    width:2000px;
+    position: relative;
+    transition:all 0.3s linear;
+}
+/* 轮播图文字 */
+.lunbop{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    width: 690px;
+    height:110px;
+    margin:auto;
+    text-align: center;
+}
+.lunbop p:nth-child(1){
+    font-size: 46px;
+    color:#fff;
+}
+.lunbop p:nth-child(2){
+    margin-top: 20px;
+    font-size: 16px;
+    color:#ddd;
+}
+#lunbop1-1{
+    position: relative;
+    opacity: 1;
+    top:0;
+    transition: all 0.2s linear;
+}
+#lunbop1-2{
+    position: relative;
+    opacity: 1;
+    top:0;
+    transition: all 0.2s linear 0.2s;
+}
+#lunbop2-1{
+    position: relative;
+    opacity: 0;
+    top:30px;
+    transition: all 0.2s linear;
+}
+#lunbop2-2{
+    position: relative;
+    opacity: 0;
+    top:30px;
+    transition: all 0.2s linear  0.2s;
+}
+.part3back{
+    background-color: #F4F4F4;
+}
+/* 每个节标题样式 */
+.content-p{
+    text-align: center;
+    padding-top:100px;
+}
+.content-p p:nth-child(1){
+    font-size: 26px;
+    color:#555;
+}
+.content-p p:nth-child(2){
+    color:#bbb;
+    line-height: 26px;
+}
+/* part3 第一个ul */
+.part3-firstul {
+    width: 488px;
+    margin:20px auto 0 auto;
+}
+.part3-firstul li{
+    float: left;
+    height:40px;
+    line-height: 40px;
+    border:1px solid #e5e5e5;
+}
+.part3-firstul li:not(:first-child){
+    margin-left:10px
+}
+.part3-firstul li a{
+    display: block;
+    padding:0 30px;
+    color:#828282;
+}
+.part3-firstul li a:hover{
+    color:#fff;
+}
+.part3-firstul li:hover{
+    background-color:#3DB45E;
+}
+/* 当前选中全部 */
+.part3-firstul li:first-child{
+    background-color:#3DB45E;
+}
+.part3-firstul li:first-child a{
+    color:#fff;
+}
+/* part3第二个ul */
+/* 第二个ul跟上面的距离 */
+.part3-secondul{
+    margin-top:50px;
+}
+/* 每个li的大小及内部图片位置 */
+.part3-secondul li{
+    float: left;
+    width:33.33333333333333%;
+    position: relative;
+    overflow: hidden;
+}
+.part3-secondul li img{
+    width:100%;
+    transition: all 0.2s linear;
+}
+/* 鼠标移入图片放大 */
+.part3-secondul li:hover img{
+    transform: scale(1.1);
+}
+/* 黑色透明背景 */
+.part3-secondul li div:nth-child(2){
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+.part3-secondul li:hover div:nth-child(2){
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+}
+/* +位置，移入动画 */
+.part3-secondul li div:nth-child(3){
+    position: absolute;
+    top:65px;
+    left:0;
+    right:0;
+    margin: 0 auto;
+    width: 48px;
+    height: 48px;
+    line-height: 45px;
+    border-radius:24px;
+    background-color:#3DB45E;
+    color:#fff;
+    font-size: 20px;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+.part3-secondul li:hover div:nth-child(3){
+    top:85px;
+    opacity: 1;
+}
+.part3-secondul li div:nth-child(3):hover{
+    transform:rotate(90deg);
+}
+/* 文字位置，移入效果 */
+.part3-secondul li div:nth-child(4){
+    position: absolute;
+    top:162px;
+    left:0;
+    right:0;
+    margin: 0 auto;
+    color:#3DB45E;
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.4s linear;
+}
+.part3-secondul li:hover div:nth-child(4){
+    top:148px;
+    opacity: 1;
+}
+.part3-secondul li div:nth-child(5){
+    position: absolute;
+    top:164px;
+    left:0;
+    right:0;
+    margin: 0 auto;
+    color:#777;
+    opacity: 0;
+    transition: all 0.4s linear;
+}
+.part3-secondul li:hover div:nth-child(5){
+    top:172px;
+    color:#bbb;
+    opacity: 1;
+}
+/* more按钮 */
+.more{
+    margin-top: 80px;
+    padding-bottom: 100px;
+    position: relative;
+}
+.more a{
+    display: block;
+    margin: 0 auto;
+    color:#666;
+    width:182px;
+    height:48px;
+    line-height: 48px;
+    text-align: center;
+    border-radius: 24px;
+    transition: all 0.2s linear;
+}
+.more a:hover{
+    display: block;
+    margin: 0 auto;
+    color:#fff;
+    width:182px;
+    height:48px;
+    line-height: 48px;
+    border-radius: 24px;
+    background-color: #3DB45E;
+}
+/* 两根线的位置 */
+.more div{
+    position: absolute;
+    top:0;
+    height:24px;
+    width: 45%;
+    border-bottom: 1px solid #e5e5e5;
+    transition: all 0.2s linear;
+}
+.more div:nth-child(2){
+    top:0;
+    left: 0;
+}
+.more div:nth-child(3){
+    top:0;
+    right:0;
+}
+.more a:hover~div{
+    width:40%;
+}
+/* 四个产品类别 */
+.chanpinlei{
+    margin-top:100px;
+    padding-bottom: 150px;
+    position: relative;
+    text-align: center;
+}
+/* 图片大小 */
+.chanpinback{
+    width: 100%;
+    min-width: 1200px;
+}
+/* 内容块定位 */
+.chanpinpos{
+    position: absolute;
+    top:90px;
+    left: 0;
+    right:0;
+    margin:auto;
+}
+/* 左右块分别浮动 */
+.chanpinleft{
+    float:left;
+}
+.chanpinright{
+    float:right;
+}
+/* 每个块样式 */
+.chanpinlei ul li{
+    list-style: none;
+    width:360px;
+    height:250px;
+    /* border:1px solid red; */
+    position: relative;
+}
+.chanpinlei ul li:nth-child(2){
+    margin-top:50px;
+}
+/* 线框背景 */
+.chanpinlei ul li div:nth-child(1){
+    position: absolute;
+    bottom: 0;
+    width:358px;
+    height:0;
+    border:1px solid #E4E4E4;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+.chanpinlei ul li:hover div:nth-child(1){
+    height:214px;
+    opacity: 1;
+}
+/* 图标 */
+.chanpinlei ul li img:nth-child(2){
+    z-index: 1;
+    position: relative;
+    top:-22px;
+    transition: all 0.2s linear;
+    /* transform: scale(1.1); */
+}
+.chanpinlei ul li:hover img:nth-child(2){
+    transform: scale(1.1);
+}
+/* 短横线 */
+.chanpinlei ul li div:nth-child(3){
+    position: absolute;
+    top:100px;
+    left:0;
+    right:0;
+    margin:auto;
+    transition: all 0.3s linear;
+    width:20px;
+    height: 1px;
+    background-color: #e1e1e1;
+}
+.chanpinlei ul li:hover div:nth-child(3){
+    width:0px;
+}
+/* 竖线 */
+.chanpinlei ul li div:nth-child(4){
+    position: absolute;
+    top:91px;
+    left:0;
+    right:0;
+    margin:auto;
+    transition: all 0.3s linear;
+    width:1px;
+    height:0px;
+    background-color: #e1e1e1;
+    z-index: 1;
+}
+.chanpinlei ul li:hover div:nth-child(4){
+    height:20px;
+    
+}
+/* 文字 */
+.chanpin-art{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    transition: all 0.3s linear;
+}
+.chanpin-art p:nth-child(1){
+    font-size: 16px;
+    color:#333;
+    margin-bottom: 10px;
+    transition: all 0.2s linear;
+}
+.chanpin-art p:nth-child(2){
+    color:#999;
+}
+.chanpinlei ul li:hover .chanpin-art{
+    margin-top:10px;
+}
+.chanpinlei ul li:hover .chanpin-art p:nth-child(1){
+    color:#3DB45E;
+}
+/* 新闻动态 */
+.news{
+    background-color:#F4F4F4;
+    padding-bottom: 100px;
+}
+.news-ul1{
+    margin:0 auto;
+    width:190px;
+    margin-top:20px;
+}
+.news-ul1 li{
+    float: left;
+    height:40px;
+    line-height: 40px;
+    border:1px solid #e5e5e5;
+}
+.news-ul1 li:nth-child(2){
+    margin-left: 10px;
+}
+.news-ul1 li:hover{
+    background-color: #3DB45E;
+    border:1px solid #e5e5e5;
+}
+.news-ul1 li:nth-child(1){
+    background-color: #3DB45E;
+    border:1px solid #e5e5e5;
+}
+.news-ul1 li a{
+    display: block;
+    padding:0 30px;
+    color:#828282;
+}
+.news-ul1 li a:hover{
+    color:#fff;
+}
+.news-ul1 li:nth-child(1) a{
+    color:#fff;
+}
+.newsli{
+    margin:50px auto 0 auto;
+    width: 100%;
+    min-width: 1200px;
+}
+.news-cont{
+    position: relative;
+    height:422px;
+    margin-top:50px;
+}
+.news-cont>div{
+    position: absolute;
+}
+/* news3块内容位置及大小自适应 */
+.news-cont>div:nth-child(1){
+    left:0;
+    top:0;
+    width:30%;
+    height:422px;
+}
+.news-cont>div:nth-child(2){
+    left:0;
+    right:0;
+    margin:auto;
+    width:30%;
+    height:422px;
+}
+.news-cont>div:nth-child(3){
+    right:0;
+    top:0;
+    width:30%;
+    height:422px;
+}
+/* 内容样式 */
+.news-neirong{
+    text-align: center;
+    background-color: #F4F4F4;
+    transition:all 0.2s linear;
+    border:1px solid #F4F4F4;
+}
+.news-neirong:hover{
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    border:1px solid #E4E4E4;
+}
+.news-neirong>div>a>div:nth-child(1){
+    width:100%;
+    height:220px;
+    overflow: hidden;
+    
+}
+.news-neirong img{
+    width:100%;
+    transition:all 0.2s linear;
+}
+.news-neirong:hover img{
+    transform: scale(1.1);
+}
+.news-neirong div:nth-child(2){
+    position: relative;
+    top:-48px;
+    width: 100%;
+    height:48px;
+    line-height: 48px;
+    background-color: #3DB45E;
+    color:#fff;
+    opacity: 0;
+    transition:all 0.2s linear;
+}
+.news-neirong:hover div:nth-child(2){
+    opacity: 1;
+}
+.news-neirong p:nth-child(3){
+    font-size:16px;
+    color:#333;
+    padding:0 10px;
+}
+.news-neirong:hover p:nth-child(3){
+    color:#3DB45E;
+}
+.news-neirong p:nth-child(4){
+    line-height: 24px;
+    font-size:13px;
+    margin-top: 20px;
+    color:#999;
+    padding:0 40px;
+}
+/* 案例 */
+.anlipos{
+    padding:60px 0;
+}
+.anlipos img{
+    width:100%;
+    vertical-align: top;
+}
+/* 左侧图片定位 */
+.anlileft{
+    float: left;
+    width: 40%;
+    height:609px;
+    overflow: hidden;
+    position: relative;
+}
+.imgcd{
+    position: absolute;
+    top:0;
+    transition:all 0.8s ease;
+}
+.anlileft:hover img{
+    transform: scale(1.1);
+}
+/* 右侧 */
+.anliright{
+    float: right;
+    width: 60%;
+}
+.anliright li{
+    float: left;
+    width: 33.3333333333333%;
+    overflow: hidden;
+    position: relative;
+}
+.anliright li>img{
+    transition:all 0.3s linear;
+}
+.anliright li:hover>img{
+    transform: scale(1.1);
+}
+/* 背景层 */
+.anliright li>a>div:nth-child(2){
+    position: absolute;
+    top:0;
+    width:0;
+    height:100%;
+    background-color: #3DB45E;
+    opacity: 0.8;
+    transition:all 0.3s linear;
+}
+.anliright li:hover>a>div:nth-child(2){
+    width:100%;
+}
+/* 文字层 */
+.anliright li>a>div:nth-child(3){
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    height:48px;
+    text-align: center;
+    transition:all 0.3s linear;
+}
+.anliright li>a>div:nth-child(3)>p:first-child{
+    font-size: 16px;
+    color:#fff;
+    transition:all 0.3s linear;
+    position: relative;
+    top:15px;
+    opacity: 0;
+}
+.anliright li:hover>a>div:nth-child(3)>p:first-child{
+    top:0;
+    opacity: 1;
+}
+.anliright li>a>div:nth-child(3)>p:last-child{
+    color:#fff;
+    transition:all 0.3s linear;
+    margin-top: 10px;
+    position: relative;
+    top:-15px;
+    opacity: 0;
+}
+.anliright li:hover>a>div:nth-child(3)>p:last-child{
+    top:0;
+    opacity: 1;
+}
+/* 合作 */
+.hezuo{
+    background-color: #F4F4F4;
+    padding-bottom:100px;
+}
+.hezuo ul{
+    margin-top:50px;
+}
+.hezuo li{
+    float: left;
+    width: 19.8%;
+    border:1px solid #E5E5E5;
+    position: relative;
+}
+.hezuo li>img{
+    width: 100%;
+}
+.hezuo ul>li>div{
+    width:0;
+    height:2px;
+    background-color: #3DB45E;
+    position: absolute;
+    top:0;
+    left: 0;
+    right:0;
+    margin:auto;
+    transition:all 0.4s ease;
+}
+.hezuo ul>li:hover>div{
+    width: 100%;
+}
+/* 表单 */
+.biaodan{
+    padding:100px 0;
+}
+/* 左侧 */
+.messg{
+    float: left;
+    width: 30%;
+}
+.messg>p{
+    width:100%;
+}
+.messg>p:nth-child(1){
+    font-size:16px;
+    color:#666;
+    padding:50px 0 0 0;
+    margin:0 0 25px 0;
+}
+.messg>p~p{
+    font-size:13px;
+    line-height: 28px;
+    color:#989898;
+    padding:0 30px 0 0;
+}
+.messg>ul>li{
+    float: left;
+    width:36px;
+    height:36px;
+    line-height: 36px;
+    text-align: center;
+    border-radius:18px;
+    transition: all 0.2s linear;
+}
+.messg>ul>li~li{
+    margin-left: 10px;
+}
+.messg>ul>li:hover{
+    background-color: #3DB45E;
+}
+.messg>ul>li:nth-child(2){
+    line-height:40px;
+}
+.messg>ul>li>a{
+    display: block;
+    color:#B3B3B3;
+}
+.messg>ul>li:hover>a{
+    color:#fff;
+}
+/* 右侧 */
+.biaodancont{
+    float:left;
+    width:70%;
+    height:300px;
+}
+.firsthang{
+    padding:50px 0 0 0;
+}
+.wenben{
+    font-size: 14px;
+    width: 33%;
+    height:42px;
+    border:none;
+    border-bottom:1px solid #DEDEDE;
+    outline:none;
+}
+.wenben:focus{
+    border-bottom:1px solid #3DB45E;
+}
+.firsthang textarea{
+    resize:none;
+    margin-top: 10px;
+    width: 100%;
+    height:115px;
+    border:none;
+    border-bottom:1px solid #DEDEDE;
+    outline:none;
+} 
+.firsthang textarea:focus{
+    border-bottom:1px solid #3DB45E;
+} 
+.subbtn{
+    width:200px;
+    height:48px;
+    border:none;
+    background-color:#848484; 
+    color:#fff;
+    border-radius: 24px;
+    margin-top:10px;
+    transition: all 0.3s linear;
+}
+.subbtn:hover{
+    background-color: #3DB45E;
+}

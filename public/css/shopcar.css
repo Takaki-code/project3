@@ -1,0 +1,107 @@
+.content{
+    width: 80%;
+    min-width: 1200px;
+}
+
+.table{
+    margin-top:110px;
+    width: 100%;
+    padding-bottom: 150px;
+}
+
+.thead{
+    height: 40px;
+    line-height: 40px;
+    background-color:#F1F1F1;
+}
+.table td{
+    text-align:center;
+}
+.table tbody td{
+    text-align:center;
+    padding: 10px 10px;
+}
+.table td:nth-child(1){
+    width: 80px;
+}
+.checkbox{
+    margin-bottom:2px ;
+}
+.imgtd{
+    width: 268px;
+}
+.imgtd .tdleft{
+    float: left;
+}
+.imgtd .tdright{
+    float: left;
+    text-align: left;
+    margin-left: 30px;
+}
+.tdright p{
+    line-height: 25px;
+}
+.imgtd img{
+    width:120px;
+}
+.imgnum{
+    width:180px;
+}
+.num{
+    outline:none;
+    padding: 6px 10px;
+    border:1px solid #ccc;
+}
+input.num{
+    width: 30px;
+    text-align:center;
+}
+
+.xiaoji{
+    color:#D81E3A;
+    font-weight: bold;
+}
+
+.remove{
+    padding: 4px 5px;
+    outline: none;
+    border:1px solid #ccc;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.removnum{
+    cursor: pointer;
+}
+.addnum{
+    cursor: pointer;
+}
+tfoot{
+    background-color:#F1F1F1
+}
+tfoot tr{
+    padding-top:20px
+}
+tfoot tr td{
+    padding: 20px;
+}
+tfoot tr td:nth-last-child(2){
+    color:#D81E3A;
+    font-weight: bold;
+}
+tfoot tr td:nth-last-child(2) span{
+    font-size: 24px;
+}
+.tobuy{
+    border:none;
+    outline:none;
+    font-size: 16px;
+    padding: 5px 20px;
+    background-color:#FF6600;
+    color:#fff;
+    border-radius: 5px;
+    cursor: pointer;;
+}
+
+#totalw{
+    width: 200px;
+}

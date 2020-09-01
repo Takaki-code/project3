@@ -1,0 +1,84 @@
+/* 导航栏当前标记 */
+nav ul:first-child li:nth-child(2) a{
+    color:#3DB45E;
+    border-bottom: 2px solid #3DB45E;
+}
+.part3-firstul {
+    width: 488px;
+    margin:0 auto;
+    padding-top:90px;
+}
+.part3-firstul li{
+    float: left;
+    height:40px;
+    line-height: 40px;
+    border:1px solid #e5e5e5;
+    transition: all 0.1s linear;
+}
+.part3-firstul li:not(:first-child){
+    margin-left:10px
+}
+.part3-firstul li a{
+    display: block;
+    padding:0 30px;
+    color:#828282;
+}
+.part3-firstul li a:hover{
+    color:#fff;
+}
+.part3-firstul li:hover{
+    background-color:#3DB45E;
+}
+
+
+/* 产品图6块 */
+.part4{
+    margin-top: 40px;
+    padding-bottom: 150px;
+}
+.part4>ul>li{
+    float: left;
+    width:32.4%;
+    height:414px;
+    margin-bottom: 16px;
+}
+.part4>ul>li:not(:nth-child(3n+1)){
+    margin-left: 16px;
+}
+
+/* 图片 */
+.imgz{
+    overflow: hidden;
+}
+.part4>ul>li>a img{
+    width:100%;
+    transition:all 0.3s ease;
+}
+.part4>ul>li:hover>a img{
+    transform: scale(1.1);
+}
+/* 文字 */
+
+.part4>ul>li>a>div:last-child p:nth-child(1){
+    font-size: 16px;
+    line-height:24px;
+    color:#333;
+    padding-top:26px;
+}
+.part4>ul>li>a>div:last-child p:nth-child(2){
+    color:#777;
+}
+.part4>ul>li>a>div:last-child p{
+    text-align: center;
+    transition: all 0.4s ease;
+}
+.part4>ul>li:hover>a>div:last-child p{
+    color:#fff;
+}
+.part4>ul>li>a>div:last-child{
+    height:100px;
+    transition: all 0.4s ease;
+}
+.part4>ul>li:hover>a>div:last-child{
+    background-color: #3DB45E;
+}

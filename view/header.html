@@ -1,0 +1,79 @@
+<header>
+    <div class="backz log">
+        <div id="log">
+            <div class="denglu">
+                <ul>
+                    <li><a href="#">密码登录</a></li>
+                    <li><a href="#">短信登录</a></li>
+                </ul>
+            </div>
+            <div class="input">
+                <input type="text" name="zhaghao" id="username" placeholder="手机号/邮箱/用户名">
+                <p id="userafter">&nbsp;</p>
+                <input type="password" name="mima" id="pwd" placeholder="密码">
+                <p id="pwdafter">&nbsp;</p>
+            </div>
+            <div class="logid">
+                <input type="button" value="登录" id="logindo" class="sub">
+                <div id="auto">
+                    <input type="checkbox" name="autolog">
+                    <span>下次自动登录</span>
+                    <span><a href="register.html">没有账号，去注册</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="backz reg">
+        <div id="reg">
+            <div class="denglu">
+                <ul>
+                    <li><a href="#">账号注册</a></li>
+                    <li><a href="#">手机注册</a></li>
+                </ul>
+            </div>
+            <div class="input">
+                <input type="text" name="zhaghao" id="reg_username" placeholder="手机号/邮箱/用户名">
+                <p id="reg_userafter">&nbsp;</p>
+                <input type="password" name="mima" id="reg_pwd" placeholder="密码">
+                <p id="reg_pwdafter">&nbsp;</p>
+                <input type="password" name="mima" id="reg_qupwd" placeholder="确认密码">
+                <p id="reg_qupwdafter">&nbsp;</p>
+            </div>
+            <div class="logid">
+                <input type="button" value="提交" id="loginout" class="sub">
+            </div>
+        </div>
+    </div>
+    <nav id="nav">
+        <div class="content clearfix">
+            <ul class="clearfix" id="menu">
+                <!-- 用户登录状态 -->
+                <% if(user){ %>
+                <li><a href="index.html">智慧首页</a></li>
+                <li><a href="zhihuichanpin.html">智慧产品</a></li>
+                <li><a href="javascript:">解决方案</a></li>
+                <li><a href="javascript:">家居服务</a></li>
+                <li><a href="javascript:">新闻动态</a></li>
+                <li><a href="shopcar.html">购物车</span></a></li>
+                <li id="outhid">
+                    <div id="toux"><img src=" <%= headimg %> " alt=""></div>
+                    <div class="outlogdin" id="out"> 退出登录 </div>
+                </li>
+                <li id="usrename"><span><%= user %></span> </li>
+                <!-- 用户未登录状态 -->
+                <% } else{ %>
+                <li><a href="index.html">智慧首页</a></li>
+                <li><a href="zhihuichanpin.html">智慧产品</a></li>
+                <li><a href="javascript:">解决方案</a></li>
+                <li><a href="javascript:">家居服务</a></li>
+                <li><a href="javascript:">新闻动态</a></li>
+                <li><a href="javascript:onload=logind()">购物车</span></a></li>
+                <li id="tologin"><a href="javascript:">登录</a></li>
+                <li>|</li>
+                <li id="tologout"><a href="javascript:">注册</a></li>
+                <% } %>
+            </ul>
+            <a href="index.html"><img src="images/logo.png" id="logo" alt=""></a>
+        </div>
+    </nav>
+</header>

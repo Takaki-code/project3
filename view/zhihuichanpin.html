@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧产品-teamcx </title>
+    <link rel="stylesheet" href="css/public_style.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/zhihui.css">
+</head>
+<style>
+    /* 当前页面:1全部 */
+    .part3-firstul li:nth-child(1) {
+        background-color: #3DB45E;
+    }
+
+    .part3-firstul li:nth-child(1) a {
+        color: #fff;
+    }
+</style>
+
+<body>
+    <%- include ('./header.html')%>
+    <section>
+        <div class="content">
+            <div class="part3">
+                <ul class="part3-firstul clearfix">
+                    <li><a href="zhihuichanpin.html?dataClass=all">全部</a></li>
+                    <li><a href="zhihuichanpin.html?dataClass=dengju">灯具和电器</a></li>
+                    <li><a href="zhihuichanpin.html?dataClass=wenkong">温控器</a></li>
+                    <li><a href="zhihuichanpin.html?dataClass=family">家庭电影院</a></li>
+                </ul>
+            </div>
+            <div class="part4">
+                <ul class="clearfix">
+                    <% for(let i = 0; i < info.length; i++){ %>
+                    <li id="chanpin" +(i+1)>
+                        <a href="shop.html?shopId=<%= info[i].shop_id %>">
+                            <div class="imgz"><img src="<%= info[i].shop_img %>" alt=""></div>
+                            <div>
+                                <p> <%= info[i].shopName %> </p>
+                                <p> <%= info[i].shopName_E %> </p>
+                            </div>
+                        </a>
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <%- include ('./footer.html')%>
+
+</body>
+
+</html>

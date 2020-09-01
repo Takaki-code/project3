@@ -1,0 +1,136 @@
+section{
+    padding-bottom: 50px;
+}
+
+.shop{
+    
+    width: 80%;
+    min-width: 1200px;
+    margin: 120px auto;
+    overflow: hidden;
+}
+.shopleft{
+    float: left;
+    width: 49%;
+    /* border:1px solid red; */
+    overflow: hidden;
+}
+.shopleft img{
+    width: 100%;
+    
+}
+.imglist{
+    margin-top: 20px;
+}
+.flex{
+    display:flex;
+    justify-content:space-between;
+}
+.imgs{
+    width: 18%;
+    border:2px solid transparent;
+    cursor: pointer;
+}
+.imgs_index{
+    border:2px solid red;
+}
+.shopright{
+    float: right;
+    width: 49%;
+    /* border:1px solid red; */
+}
+.title{
+    font-size:22px
+}
+.price{
+    background-color: #F6F6F6;
+    margin-top: 10px;
+}
+.jiage{
+    padding:15px 20px;
+}
+.jiage span:nth-child(1){
+    color: #D81E3A;
+    font-size: 16px;
+    margin-left: 20px;
+}
+.jiage span:nth-child(2){
+    color: #D81E3A;
+    font-size: 24px;
+}
+.kucun{
+    padding:15px 20px ;
+}
+.kucun span{
+    font-size: 16px;
+    margin-left: 20px;
+}
+.mesg{
+    margin-top:20px;
+    display: flex;
+    justify-content:flex-start;
+}
+.mesg div~div{
+    margin-left: 20px;
+}
+.mesg span{
+    color: #D81E3A;
+    font-weight: bold;
+}
+.line{
+    margin-top:20px;
+    border-bottom:2px dotted #ccc;
+}
+.color{
+    padding:20px 20px;
+    
+}
+.guige{
+    padding:20px 20px;
+    
+}
+.shuliang{
+    padding:20px 20px;
+    
+}
+.speci_title{
+    margin-right: 20px;
+}
+.choose{
+    padding:6px 20px;
+    border:2px solid #ccc;
+    margin:0 6px;
+    cursor: pointer;
+}
+.thechoose{
+    border:2px solid #D81E3A;
+}
+.btn{
+    padding: 6px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.inputm{
+    width: 40px;
+    padding: 7px 20px;
+    text-align: center;
+    margin: 0;
+    outline: none;
+}
+.buy_btn{
+    padding: 10px 20px;
+    border:none;
+    outline: none;
+    color:#fff;
+    cursor: pointer;
+}
+#shopcar{
+    background-color:#3DB45E;
+}
+#buy{
+    background-color:#D81E3A;
+    margin-left: 20px;
+}
+.shopb{
+    padding:6px 20px;
+}
